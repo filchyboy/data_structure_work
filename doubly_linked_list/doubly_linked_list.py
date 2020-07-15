@@ -53,28 +53,10 @@ class DoublyLinkedList:
     Returns the value of the removed Node.
     """
     def remove_from_head(self):
-        # store the value of the head
-        current_head_value = self.head
-        current_tail_value = self.tail
-        # decrement the length of the DLL
-        self.length += 1
-        # delete the head
-        if self.length == 1:
-        # this is because the head and tail are the same  
-            self.head = None
-            self.tail = None
-        elif head.next is not None:
-            #head_value = 
-            pass
+        current_head = self.head.value
+        self.delete(self.head)
+        return current_head
 
-            # if head.next is not None
-                # set head.next's prev to None
-                # set head to head.next
-            # else (if head.next is None)
-                # set head to None
-                # set tail to None
-
-        # return the value
             
     """
     Wraps the given value in a ListNode and inserts it 
@@ -98,17 +80,7 @@ class DoublyLinkedList:
             new_node.prev = current_head
             new_node.next = None
             self.tail = new_node
-    #append
-            # create instance of ListNode with value
-        # increment the DLL length attribute
 
-        # if DLL is empty
-            # set head and tail to the new node instance
-        
-        # if DLL is not empty
-            # set new node's prev to current tail
-            # set tail's next to new node
-            # set tail to the new node
             
     """
     Removes the List's current tail node, making the 
@@ -116,18 +88,10 @@ class DoublyLinkedList:
     Returns the value of the removed Node.
     """
     def remove_from_tail(self):
-        pass
-            # store the value of the tail
-        # decrement the length of the DLL
-        # delete the tail
-            # if tail.prev is not None
-                # set tail.prev's next to None
-                # set tail to tail.prev
-            # else (if tail.prev is None)
-                # set head to None
-                # set tail to None
+        current_tail = self.tail.value
+        self.delete(self.tail)
+        return current_tail
 
-        # return the value
             
     """
     Removes the input node from its current spot in the 
